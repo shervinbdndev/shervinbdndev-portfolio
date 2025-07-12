@@ -1,0 +1,13 @@
+.page-footer {
+  background: transparent !important;
+  user-select: none;
+}
+
+.page-footer p {
+  color: #000;
+  margin: 0;
+}
+
+body.dark-mode .page-footer p {
+  color: #fff;
+}

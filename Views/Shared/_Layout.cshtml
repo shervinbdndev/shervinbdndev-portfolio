@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>شروین بدن‌آرا | توسعه‌دهنده فول‌استک و متخصص ASP.NET Core</title>
+    <meta name="title" content="شروین بدن‌آرا | توسعه‌دهنده فول‌استک و متخصص ASP.NET Core" />
+    <meta name="description" content="نمونه‌کارهای شروین بدن‌آرا، توسعه‌دهنده فول‌استک با تخصص در ASP.NET Core، طراحی تجربه کاربری و توسعه سیستم‌های مقیاس‌پذیر." />
+    <meta name="keywords" content="شروین بدن‌آرا, توسعه‌دهنده فول‌استک, ASP.NET Core, نمونه کار, طراحی UX, برنامه نویسی, Portfolio, برنامه نویس ایرانی" />
+    <meta name="author" content="شروین بدن‌آرا" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="fa" />
+    <meta name="theme-color" content="#00BCD4" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shervinbdndev.com/" />
+    <meta property="og:title" content="شروین بدن‌آرا | توسعه‌دهنده فول‌استک و متخصص ASP.NET Core" />
+    <meta property="og:description" content="نمونه‌کارهای شروین بدن‌آرا، توسعه‌دهنده فول‌استک با تخصص در ASP.NET Core، طراحی تجربه کاربری و توسعه سیستم‌های مقیاس‌پذیر." />
+    <meta property="og:image" content="https://shervinbdndev.com/images/og-image.jpg" />
+    <meta property="og:locale" content="fa_IR" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://shervinbdndev.com/" />
+    <meta property="twitter:title" content="شروین بدن‌آرا | توسعه‌دهنده فول‌استک و متخصص ASP.NET Core" />
+    <meta property="twitter:description" content="نمونه‌کارهای شروین بدن‌آرا، توسعه‌دهنده فول‌استک با تخصص در ASP.NET Core، طراحی تجربه کاربری و توسعه سیستم‌های مقیاس‌پذیر." />
+    <meta property="twitter:image" content="https://shervinbdndev.com/images/og-image.jpg" />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="canonical" href="https://shervinbdndev.com/" />
+
+    <meta http-equiv="Content-Language" content="fa" />
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/about.css" rel="stylesheet" />
+    <link href="~/css/skills.css" rel="stylesheet" />
+    <link href="~/css/banner.css" rel="stylesheet" />
+    <link href="~/css/footer.css" rel="stylesheet" />
+    <link href="~/css/contact.css" rel="stylesheet" />
+    <link href="~/css/services.css" rel="stylesheet" />
+    <link href="~/css/document.css" rel="stylesheet" />
+    <link href="~/css/projects.css" rel="stylesheet" />
+    <link href="~/css/graduation.css" rel="stylesheet" />
+    
+    <nav class="custom-navbar">
+        <div id="particles-bg"></div>
+    </nav>
+</head>
+<body>
+
+    <main class="container">
+        @RenderBody()
+    </main>
+
+    <footer class="page-footer">
+        <div class="center-align">
+            <p>© @DateTime.Now.Year شروین بدن‌آرا - تمامی حقوق محفوظ است.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true,
+        });
+    </script>
+
+    <script src="~/js/site.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    @RenderSection("Scripts", required: false)
+
+    <button id="scrollToTopBtn" aria-label="بازگشت به بالا">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <div id="cursor-glow"></div>
+
+    <script>
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 400) {
+                document.body.classList.add("show-scroll-btn");
+            } else {
+                document.body.classList.remove("show-scroll-btn");
+            }
+        });
+
+        scrollToTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        const cursorGlow = document.getElementById("cursor-glow");
+        let mouseX = 0, mouseY = 0;
+
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateGlow() {
+            cursorGlow.style.transform = `translate(${mouseX - 20}px, ${mouseY - 20}px)`;
+            requestAnimationFrame(animateGlow);
+        }
+
+        animateGlow();
+
+        const tabs = document.querySelectorAll('.tab-button');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+            
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
+
+            tab.classList.add('active');
+            document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+.education-section {
+  padding: 4rem 1.5rem;
+  direction: rtl;
+  text-align: right;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding-right: 1rem;
+  direction: ltr;
+}
+
+.timeline-year {
+  font-weight: 900;
+  color: #00bcd4;
+  background: linear-gradient(to right, #00bcd4, #69f0ae);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.05rem;
+  animation: glowYear 3s infinite ease-in-out;
+}
+
+@keyframes glowYear {
+  0%, 100% {
+    text-shadow: 0 0 6px #00e5ff;
+  }
+  50% {
+    text-shadow: 0 0 12px #69f0ae;
+  }
+}
+
+body.dark-mode .timeline-year {
+  color: #69f0ae;
+  background: linear-gradient(to right, #69f0ae, #00e5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #00bcd4;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-right: 3rem;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+}
+
+.timeline-icon {
+  position: absolute;
+  right: -6px;
+  top: 0;
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+  z-index: 1;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.timeline-content h6 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #004d61;
+}
+
+.timeline-content p {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 188, 212, 0.25);
+}
+
+/* Dark mode support */
+body.dark-mode .timeline-content {
+  background: rgba(20, 30, 50, 0.8);
+  color: #e0f7fa;
+}
+
+body.dark-mode .timeline-content h6 {
+  color: #69f0ae;
+}
+
+body.dark-mode .timeline-content p {
+  color: #b2ebf2;
+}
+
+body.dark-mode .timeline-date {
+  color: #80deea;
+}

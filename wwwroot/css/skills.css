@@ -1,0 +1,269 @@
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  direction: rtl;
+  gap: 1.5rem;
+}
+
+.skill-item {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 188, 212, 0.15);
+  border-right: 5px solid #00bcd4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 110px;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+body.dark-mode .skill-item {
+  background-color: #2a375b;
+  color: #e0f7fa;
+  border-right-color: #00bcd4;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.skill-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #00bcd4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
+}
+
+.skill-level {
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.level-expert,
+.level-advanced,
+.level-intermediate {
+  background: none !important;
+  padding: 0;
+}
+
+body:not(.dark-mode) .level-expert {
+  color: #00c853;
+}
+body:not(.dark-mode) .level-advanced {
+  color: #00c853;
+}
+body:not(.dark-mode) .level-intermediate {
+  color: #ff9800;
+}
+
+body.dark-mode .level-expert {
+  color: #69f0ae;
+}
+body.dark-mode .level-advanced {
+  color: #69f0ae;
+}
+body.dark-mode .level-intermediate {
+  color: #ffd54f;
+}
+
+body.dark-mode .section-title {
+  color: #69f0ae;
+  text-shadow: 0 0 15px #00e5ff, 0 0 30px #00bcd4;
+}
+
+body.dark-mode .section-title::after {
+  background: linear-gradient(to right, #00e5ff, #69f0ae, #00e5ff);
+}
+
+@keyframes shinyText {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #00e5ff, 0 0 20px #00bcd4;
+  }
+  50% {
+    text-shadow: 0 0 20px #00e5ff, 0 0 30px #00bcd4;
+  }
+}
+
+@keyframes glowLine {
+  0% {
+    box-shadow: 0 0 8px #00e5ff;
+  }
+  50% {
+    box-shadow: 0 0 20px #00bcd4;
+  }
+  100% {
+    box-shadow: 0 0 8px #00e5ff;
+  }
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  direction: ltr;
+}
+
+.progress-bar.level-expert .progress-fill {
+  width: 85%;
+  background-color: #1565c0;
+}
+
+.progress-bar.level-advanced .progress-fill {
+  width: 70%;
+  background-color: #1565c0;
+}
+
+.progress-bar.level-intermediate .progress-fill {
+  width: 50%;
+  background-color: #1565c0;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: fillProgress 1.5s forwards ease-in-out;
+}
+
+@keyframes fillProgress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.skill-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 188, 212, 0.35);
+  border-right-color: #00e5ff;
+}
+
+.skill-item:hover .skill-title {
+  color: #00e5ff;
+  transition: color 0.3s ease;
+}
+
+.skill-item:hover .skill-level {
+  color: #00e5ff;
+  transition: color 0.3s ease;
+}
+
+.skill-item:hover .progress-fill {
+  background-color: #00e5ff !important;
+  transition: background-color 0.5s ease, width 1.5s ease;
+  width: 100% !important;
+}
+
+body.dark-mode .skill-item {
+  background-color: #2a375b;
+  color: #e0f7fa;
+  border-right-color: #00bcd4;
+}
+
+body.dark-mode .skill-item:hover {
+  box-shadow: 0 10px 30px #00bcd4;
+  border-right-color: #00e5ff;
+  transform: scale(1.03);
+}
+
+body.dark-mode .skill-item:hover .skill-title,
+body.dark-mode .skill-item:hover .skill-level {
+  color: #00e5ff;
+}
+
+body.dark-mode .skill-item:hover .progress-fill {
+  background-color: #00e5ff !important;
+  width: 100% !important;
+}
+
+.tabs-container {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  justify-content: flex-start;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  padding: 0.8rem 2.4rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #004d61cc; 
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  position: relative;
+  user-select: none;
+}
+
+.tab-button:hover {
+  color: #00bcd4;
+}
+
+.tab-button.active {
+  color: #ffffff; 
+  background: linear-gradient(135deg, #00bcd4, #69f0ae);
+  box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+}
+
+
+.tab-button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20%;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, #00bcd4, #69f0ae);
+  border-radius: 20px;
+  animation: slideIn 0.4s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 60%;
+    opacity: 1;
+  }
+}
+
+
+.tab-content {
+  display: none;
+  animation: fadeInContent 0.6s ease forwards;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
