@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Nd2L3qpS0E8=",
+  "dgSpecHash": "+FRl+c+V1Dc=",
   "success": true,
   "projectFilePath": "D:\\Scripts\\Csharp\\ASP\\shervinbdndev\\shervinbdndev.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Shervin\\.nuget\\packages\\ligershark.weboptimizer.core\\3.0.471\\ligershark.weboptimizer.core.3.0.471.nupkg.sha512",
+    "C:\\Users\\Shervin\\.nuget\\packages\\nuglify\\1.21.15\\nuglify.1.21.15.nupkg.sha512"
+  ],
   "logs": []
 }

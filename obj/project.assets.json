@@ -1,11 +1,90 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "LigerShark.WebOptimizer.Core/3.0.471": {
+        "type": "package",
+        "dependencies": {
+          "NUglify": "1.21.15"
+        },
+        "compile": {
+          "lib/net8.0/WebOptimizer.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/WebOptimizer.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "build/LigerShark.WebOptimizer.Core.props": {},
+          "build/LigerShark.WebOptimizer.Core.targets": {}
+        }
+      },
+      "NUglify/1.21.15": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/NUglify.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/NUglify.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "LigerShark.WebOptimizer.Core/3.0.471": {
+      "sha512": "8r7cvMGSd2kk0XhymPDwCZII8gQ7q+7rjbVcDX+8t1i8w8O3MnRE7XkUXyrUUDBcmUanpCNGyWNtgLfERL+H7Q==",
+      "type": "package",
+      "path": "ligershark.weboptimizer.core/3.0.471",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/LigerShark.WebOptimizer.Core.props",
+        "build/LigerShark.WebOptimizer.Core.targets",
+        "lib/net8.0/WebOptimizer.Core.dll",
+        "lib/net8.0/WebOptimizer.Core.xml",
+        "ligershark.weboptimizer.core.3.0.471.nupkg.sha512",
+        "ligershark.weboptimizer.core.nuspec",
+        "logo.png"
+      ]
+    },
+    "NUglify/1.21.15": {
+      "sha512": "Vxwg0EjbM/gmILPtzfmzlf0MDu9a17OQb8b57oTgoHoRsZNHWIFQFa00Izcvuam3Hbw2eH272TfczDRHSXgSlA==",
+      "type": "package",
+      "path": "nuglify/1.21.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/NUglify.dll",
+        "lib/net35/NUglify.xml",
+        "lib/net40/NUglify.dll",
+        "lib/net40/NUglify.xml",
+        "lib/net5.0/NUglify.dll",
+        "lib/net5.0/NUglify.xml",
+        "lib/netstandard1.3/NUglify.dll",
+        "lib/netstandard1.3/NUglify.xml",
+        "lib/netstandard2.0/NUglify.dll",
+        "lib/netstandard2.0/NUglify.xml",
+        "nuglify.1.21.15.nupkg.sha512",
+        "nuglify.nuspec",
+        "nuglify.png"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "LigerShark.WebOptimizer.Core >= 3.0.471"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Shervin\\.nuget\\packages\\": {},
@@ -56,6 +135,12 @@
     "frameworks": {
       "net9.0": {
         "targetAlias": "net9.0",
+        "dependencies": {
+          "LigerShark.WebOptimizer.Core": {
+            "target": "Package",
+            "version": "[3.0.471, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

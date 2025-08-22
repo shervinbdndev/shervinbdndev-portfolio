@@ -1,8 +1,32 @@
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  direction: rtl;
+  grid-template-columns: repeat(1, 1fr);
   gap: 1.5rem;
+}
+
+.skills-section .tab-content.active {
+  display: grid;
+  grid-template-columns: 1fr;            /* mobile: 1 per row */
+  gap: 1.25rem;
+}
+
+/* tablet */
+@media (min-width: 600px) {
+  .skills-section .tab-content.active {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* desktop */
+@media (min-width: 992px) {
+  .skills-section .tab-content.active {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Make sure items stretch nicely inside grid cells */
+.skills-section .skill-item {
+  box-sizing: border-box;
 }
 
 .skill-item {

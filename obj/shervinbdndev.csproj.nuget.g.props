@@ -13,4 +13,7 @@
     <SourceRoot Include="C:\Users\Shervin\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)ligershark.weboptimizer.core\3.0.471\build\LigerShark.WebOptimizer.Core.props" Condition="Exists('$(NuGetPackageRoot)ligershark.weboptimizer.core\3.0.471\build\LigerShark.WebOptimizer.Core.props')" />
+  </ImportGroup>
 </Project>

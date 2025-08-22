@@ -1,7 +1,8 @@
-﻿@{
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, WebOptimizer.Core
+@{
     ViewData["Title"] = "خانه";
 }
-
 
 <div class="navbar-inner wow animate__animated animate__fadeInUp" data-wow-delay="0.2s" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-duration="1000">
   <button id="hamburger" class="hamburger material-icons" aria-label="منو">menu</button>
@@ -119,19 +120,25 @@
 <div id="skills" class="section skills-section" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-duration="1000">
   <h5 class="section-title">تخصص من</h5>
 
-  <!-- تب‌ها -->
   <div class="tabs-container">
     <button class="tab-button active" data-tab="languages">زبان‌ها</button>
     <button class="tab-button" data-tab="technologies">تکنولوژی‌ها</button>
     <button class="tab-button" data-tab="softwares">نرم‌افزارها</button>
+    <button class="tab-button" data-tab="OSs">سیستم عامل ها</button>
   </div>
 
-  <!-- محتواهای تب‌ها -->
   <div class="tab-content active" id="languages">
     <div class="skill-item">
       <div class="skill-header">
         <span class="skill-level level-expert">حرفه‌ای</span>
-        <span class="skill-title">C#</span>
+        <span class="skill-title">#C</span>
+      </div>
+      <div class="progress-bar level-expert"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-expert">حرفه ای</span>
+        <span class="skill-title">Python</span>
       </div>
       <div class="progress-bar level-expert"><div class="progress-fill"></div></div>
     </div>
@@ -139,6 +146,34 @@
       <div class="skill-header">
         <span class="skill-level level-advanced">پیشرفته</span>
         <span class="skill-title">JavaScript</span>
+      </div>
+      <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-advanced">پیشرفته</span>
+        <span class="skill-title">Dart</span>
+      </div>
+      <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-intermediate">متوسط</span>
+        <span class="skill-title">SQL</span>
+      </div>
+      <div class="progress-bar level-intermediate"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-advanced">پیشرفته</span>
+        <span class="skill-title">HTML</span>
+      </div>
+      <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-advanced">پیشرفته</span>
+        <span class="skill-title">CSS</span>
       </div>
       <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
     </div>
@@ -159,6 +194,76 @@
       </div>
       <div class="progress-bar level-intermediate"><div class="progress-fill"></div></div>
     </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-intermediate">متوسط</span>
+        <span class="skill-title">GRPC</span>
+      </div>
+      <div class="progress-bar level-intermediate"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-advanced">پیشرفته</span>
+        <span class="skill-title">Django</span>
+      </div>
+      <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-advanced">پیشرفته</span>
+        <span class="skill-title">Django RestFramework</span>
+      </div>
+      <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-advanced">پیشرفته</span>
+        <span class="skill-title">Flutter</span>
+      </div>
+      <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-intermediate">متوسط</span>
+        <span class="skill-title">MYSQL</span>
+      </div>
+      <div class="progress-bar level-intermediate"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-intermediate">متوسط</span>
+        <span class="skill-title">Tailwind</span>
+      </div>
+      <div class="progress-bar level-intermediate"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-intermediate">متوسط</span>
+        <span class="skill-title">Docker</span>
+      </div>
+      <div class="progress-bar level-intermediate"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-expert">حرفه ای</span>
+        <span class="skill-title">Git</span>
+      </div>
+      <div class="progress-bar level-expert"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-expert">حرفه ای</span>
+        <span class="skill-title">Github</span>
+      </div>
+      <div class="progress-bar level-expert"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-advanced">پیشرفته</span>
+        <span class="skill-title">Bootstrap</span>
+      </div>
+      <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
+    </div>
   </div>
 
   <div class="tab-content" id="softwares">
@@ -172,9 +277,68 @@
     <div class="skill-item">
       <div class="skill-header">
         <span class="skill-level level-intermediate">متوسط</span>
-        <span class="skill-title">SQL Server Management Studio</span>
+        <span class="skill-title">SQL Server</span>
       </div>
       <div class="progress-bar level-intermediate"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-advanced">پیشرفته</span>
+        <span class="skill-title">Pycharm</span>
+      </div>
+      <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-advanced">پیشرفته</span>
+        <span class="skill-title">Adobe PhotoShop</span>
+      </div>
+      <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-advanced">پیشرفته</span>
+        <span class="skill-title">Wondershare Filmora</span>
+      </div>
+      <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="OSs">
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-advanced">پیشرفته</span>
+        <span class="skill-title">Windows</span>
+      </div>
+      <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-intermediate">متوسط</span>
+        <span class="skill-title">Fedora</span>
+      </div>
+      <div class="progress-bar level-intermediate"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-advanced">پیشرفته</span>
+        <span class="skill-title">Linux Ubuntu</span>
+      </div>
+      <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-intermediate">متوسط</span>
+        <span class="skill-title">Kali Linux</span>
+      </div>
+      <div class="progress-bar level-intermediate"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header">
+        <span class="skill-level level-advanced">پیشرفته</span>
+        <span class="skill-title">Android</span>
+      </div>
+      <div class="progress-bar level-advanced"><div class="progress-fill"></div></div>
     </div>
   </div>
 </div>
@@ -270,16 +434,16 @@
     <article class="document-card" data-aos="fade-up" data-aos-delay="100">
       <img src="https://avatars.githubusercontent.com/u/68682979?v=4" alt="Document 1" class="document-image" />
       <div class="document-content">
-        <h6>عنوان سند اول</h6>
-        <p>توضیح کوتاه درباره سند اول و اهمیت آن در پروژه‌ها و توسعه.</p>
+        <h6>بزودی</h6>
+        <p>بزودی</p>
         <button class="btn-read-more">ادامه مطلب</button>
       </div>
     </article>
     <article class="document-card" data-aos="fade-up" data-aos-delay="200">
       <img src="https://avatars.githubusercontent.com/u/68682979?v=4" alt="Document 2" class="document-image" />
       <div class="document-content">
-        <h6>عنوان سند دوم</h6>
-        <p>توضیح کوتاه درباره سند دوم و کاربرد آن در محیط کاری.</p>
+        <h6>بزودی</h6>
+        <p>بزودی</p>
         <button class="btn-read-more">ادامه مطلب</button>
       </div>
     </article>
@@ -297,7 +461,7 @@
     <div class="contact-form-wrapper">
       <h5 class="contact-title">با من در تماس باشید!</h5>
       <p class="contact-friendly-text">
-        هر سوال یا پیشنهادی دارید، اینجا بنویسید. خوشحال می‌شوم پاسخ دهم!
+        هر سوال یا پیشنهادی داری، اینجا برام بنویس رفیق!
       </p>
 
       <form class="contact-form" action="#" method="POST" novalidate>

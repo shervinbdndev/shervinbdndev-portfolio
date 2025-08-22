@@ -111,7 +111,6 @@ body.dark-mode .timeline-year {
   box-shadow: 0 10px 30px rgba(0, 188, 212, 0.25);
 }
 
-/* Dark mode support */
 body.dark-mode .timeline-content {
   background: rgba(20, 30, 50, 0.8);
   color: #e0f7fa;

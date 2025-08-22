@@ -3,20 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>شروین بدن‌آرا | توسعه‌دهنده فول‌استک و متخصص ASP.NET Core</title>
+    <title>@ViewData["Title"]</title>
     <meta name="title" content="شروین بدن‌آرا | توسعه‌دهنده فول‌استک و متخصص ASP.NET Core" />
-    <meta name="description" content="نمونه‌کارهای شروین بدن‌آرا، توسعه‌دهنده فول‌استک با تخصص در ASP.NET Core، طراحی تجربه کاربری و توسعه سیستم‌های مقیاس‌پذیر." />
-    <meta name="keywords" content="شروین بدن‌آرا, توسعه‌دهنده فول‌استک, ASP.NET Core, نمونه کار, طراحی UX, برنامه نویسی, Portfolio, برنامه نویس ایرانی" />
+    <meta name="description" content="@ViewData["Description"]" />
+    <meta name="keywords" content="@ViewData["Keywords"]" />
     <meta name="author" content="شروین بدن‌آرا" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="fa" />
     <meta name="theme-color" content="#00BCD4" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://shervinbdndev.com/" />
-    <meta property="og:title" content="شروین بدن‌آرا | توسعه‌دهنده فول‌استک و متخصص ASP.NET Core" />
-    <meta property="og:description" content="نمونه‌کارهای شروین بدن‌آرا، توسعه‌دهنده فول‌استک با تخصص در ASP.NET Core، طراحی تجربه کاربری و توسعه سیستم‌های مقیاس‌پذیر." />
-    <meta property="og:image" content="https://shervinbdndev.com/images/og-image.jpg" />
+    <meta property="og:url" content="@ViewData["Canonical"]" />
+    <meta property="og:title" content="@ViewData["OGTitle"]" />
+    <meta property="og:description" content="@ViewData["OGDescription"]" />
+    <meta property="og:image" content="@ViewData["OGImage"]" />
     <meta property="og:locale" content="fa_IR" />
 
     <meta property="twitter:card" content="summary_large_image" />
@@ -131,6 +131,36 @@
 
             tab.classList.add('active');
             document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        document.querySelector(".contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            if (name === "" || email === "" || message === "") {
+            Swal.fire({
+                icon: "error",
+                title: "خطا",
+                text: "لطفا همه فیلدها رو پر کن رفیق!",
+                confirmButtonText: "باشه"
+            });
+            return;
+            }
+
+            Swal.fire({
+            title: "حوصله نداشتم بک‌اند بزنم 😅",
+            imageUrl: "/images/rickroll-roll.gif",
+            imageAlt: "Rickroll",
+            confirmButtonText: "ایمیل بزن بهم",
+            showCancelButton: true,
+            cancelButtonText: "بیخیال",
+            preConfirm: () => {
+                window.location.href = "mailto:shervin2234@gmail.com";
+            }
             });
         });
 
