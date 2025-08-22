@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\shervinbdndev.props" />
-</Project>
