@@ -1,0 +1,13 @@
+{
+  "app": "shervinbdndev",
+  "port": 7130,
+  "build": {
+    "location": "iran"
+  },
+  "disks": [
+    {
+      "name": "my-disk",
+      "mountTo": "projects"
+    }
+  ]
+}
